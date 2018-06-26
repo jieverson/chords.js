@@ -1,0 +1,15 @@
+{
+  "name": "chords.js",
+  "version": "1.0.0",
+  "description": "watchify index.js -o bundle.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "teoria": "^2.5.0",
+    "tone": "^0.12.80"
+  }
+}
