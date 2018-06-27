@@ -11,5 +11,5 @@ npm install
 
 ### Watching
 ```
-watchify index.js -o bundle.js
+watchify index.js -o bundle.js -d
 ```

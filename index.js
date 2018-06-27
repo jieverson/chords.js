@@ -5,6 +5,7 @@ synth = new Tone.PolySynth(8, Tone.Synth)
         .toMaster()
 
 const play = () => {
+    debugger
     stop()
 
     let input = document
