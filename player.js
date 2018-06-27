@@ -9,17 +9,21 @@ module.exports = {
 
         let progression = new Tone.Part((time, chord) => {
             document.getElementById('current').innerText = chord
-            synth.triggerAttackRelease(chord, "2n", time)
+            synth.triggerAttackRelease(chord, 
+                Number.isInteger(time) ? '2n' : '4n', 
+                time)
         }, chords).start(0)
 
         progression.loop = true;
-        progression.loopEnd = chords.length;
+        progression.loopEnd = parseInt(
+            chords[chords.length - 1][0] + 1);
 
         Tone.Transport.bpm.value = 140;   
         Tone.Transport.start("+0.1");
     },
     stop: () => {
         Tone.Transport.cancel();
-        document.getElementById('current').innerText = null
+        document.getElementById('current')
+            .innerText = null
     }
 }
