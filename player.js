@@ -23,6 +23,8 @@ module.exports = {
     },
     stop: () => {
         Tone.Transport.cancel();
+        Tone.Transport.stop();
+        
         document.getElementById('current')
             .innerText = null
     }
