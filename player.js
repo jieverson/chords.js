@@ -10,7 +10,7 @@ module.exports = {
         let progression = new Tone.Part((time, chord) => {
             document.getElementById('current').innerText = chord
             synth.triggerAttackRelease(chord, 
-                Number.isInteger(time) ? '2n' : '4n', 
+                Number.isInteger(time) ? '1n' : '2n', 
                 time)
         }, chords).start(0)
 
